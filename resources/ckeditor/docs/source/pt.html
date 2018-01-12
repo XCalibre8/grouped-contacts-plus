@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='global-property-'>/**
+</span> * @license Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or http://ckeditor.com/license
+ */
+
+CKEDITOR.plugins.setLang( &#39;a11yhelp&#39;, &#39;pt&#39;, {
+	title: &#39;Instruções de acessibilidade&#39;,
+	contents: &#39;Conteúdo de ajuda. Use a tecla ESC para fechar esta janela.&#39;,
+	legend: [
+		{
+		name: &#39;Geral&#39;,
+		items: [
+			{
+			name: &#39;Barra de ferramentas do editor&#39;,
+			legend: &#39;Clique em ${toolbarFocus} para navegar na barra de ferramentas. Para navegar entre o grupo da barra de ferramentas anterior e seguinte use TAB e SHIFT+TAB. Para navegar entre o botão da barra de ferramentas seguinte e anterior use a SETA DIREITA ou SETA ESQUERDA. Carregue em ESPAÇO ou ENTER para ativar o botão da barra de ferramentas.&#39;
+		},
+
+			{
+			name: &#39;Janela do editor&#39;,
+			legend:
+				&#39;Inside a dialog, press TAB to navigate to the next dialog element, press SHIFT+TAB to move to the previous dialog element, press ENTER to submit the dialog, press ESC to cancel the dialog. When a dialog has multiple tabs, the tab list can be reached either with ALT+F10 or with TAB as part of the dialog tabbing order. With tab list focused, move to the next and previous tab with RIGHT and LEFT ARROW, respectively.&#39;  // MISSING
+		},
+
+			{
+			name: &#39;Menu de contexto do editor&#39;,
+			legend: &#39;Clique em ${contextMenu} ou TECLA APLICAÇÃO para abrir o menu de contexto. Depois vá para a opção do menu seguinte com TAB ou SETA PARA BAIXO. Vá para a opção anterior com  SHIFT+TAB ou SETA PARA CIMA. Pressione ESPAÇO ou ENTER para selecionar a opção do menu.  Abra o submenu da opção atual com ESPAÇO, ENTER ou SETA DIREITA. GVá para o item do menu parente  com ESC ou SETA ESQUERDA. Feche o menu de contexto com ESC.&#39;
+		},
+
+			{
+			name: &#39;Editor de caixa em lista&#39;,
+			legend: &#39;Dentro de uma lista, para navegar para o item seguinte da lista use TAB ou SETA PARA BAIXO. Para o item anterior da lista use SHIFT+TAB ou SETA PARA BAIXO. Carregue em ESPAÇO ou ENTER para selecionar a opção lista. Carregue em ESC para fechar a caixa da lista.&#39;
+		},
+
+			{
+			name: &#39;Editor da barra de caminho dos elementos&#39;,
+			legend: &#39;Clique em ${elementsPathFocus} para navegar na barra de caminho dos elementos. Para o botão do elemento seguinte use TAB ou SETA DIREITA. para o botão anterior use SHIFT+TAB ou SETA ESQUERDA. Carregue em ESPAÇO ou ENTER para selecionar o elemento no editor.&#39;
+		}
+		]
+	},
+		{
+		name: &#39;Comandos&#39;,
+		items: [
+			{
+			name: &#39;Comando de anular&#39;,
+			legend: &#39;Carregar ${undo}&#39;
+		},
+			{
+			name: &#39;Comando de refazer&#39;,
+			legend: &#39;Clique ${redo}&#39;
+		},
+			{
+			name: &#39;Comando de negrito&#39;,
+			legend: &#39;Pressione ${bold}&#39;
+		},
+			{
+			name: &#39;Comando de itálico&#39;,
+			legend: &#39;Pressione ${italic}&#39;
+		},
+			{
+			name: &#39;Comando de sublinhado&#39;,
+			legend: &#39;Pressione ${underline}&#39;
+		},
+			{
+			name: &#39;Comando de hiperligação&#39;,
+			legend: &#39;Pressione ${link}&#39;
+		},
+			{
+			name: &#39;Comando de ocultar barra de ferramentas&#39;,
+			legend: &#39;Pressione ${toolbarCollapse}&#39;
+		},
+			{
+			name: &#39;Aceder ao comando espaço de foco anterior&#39;,
+			legend: &#39;Clique em ${accessPreviousSpace} para aceder ao espaço do focos inalcançável mais perto antes do sinal de omissão, por exemplo: dois elementos HR adjacentes. Repetir a combinação da chave para alcançar os espaços dos focos distantes.&#39;
+		},
+			{
+			name: &#39;Acesso comando do espaço focus seguinte&#39;,
+			legend: &#39;Pressione ${accessNextSpace} para aceder ao espaço do focos inalcançável mais perto depois do sinal de omissão, por exemplo: dois elementos HR adjacentes. Repetir a combinação da chave para alcançar os espaços dos focos distantes.&#39;
+		},
+			{
+			name: &#39;Ajuda a acessibilidade&#39;,
+			legend: &#39;Pressione ${a11yHelp}&#39;
+		}
+		]
+	}
+	],
+	tab: &#39;Tab&#39;, // MISSING
+	pause: &#39;Pausa&#39;,
+	capslock: &#39;Maiúsculas&#39;,
+	escape: &#39;Esc&#39;,
+	pageUp: &#39;Page Up&#39;, // MISSING
+	pageDown: &#39;Page Down&#39;, // MISSING
+	leftArrow: &#39;Seta esquerda&#39;,
+	upArrow: &#39;Seta para cima&#39;,
+	rightArrow: &#39;Seta direita&#39;,
+	downArrow: &#39;Seta para baixo&#39;,
+	insert: &#39;Inserir&#39;,
+	leftWindowKey: &#39;Left Windows key&#39;, // MISSING
+	rightWindowKey: &#39;Right Windows key&#39;, // MISSING
+	selectKey: &#39;Select key&#39;, // MISSING
+	numpad0: &#39;Numpad 0&#39;, // MISSING
+	numpad1: &#39;Numpad 1&#39;, // MISSING
+	numpad2: &#39;Numpad 2&#39;, // MISSING
+	numpad3: &#39;Numpad 3&#39;, // MISSING
+	numpad4: &#39;Numpad 4&#39;, // MISSING
+	numpad5: &#39;Numpad 5&#39;, // MISSING
+	numpad6: &#39;Numpad 6&#39;, // MISSING
+	numpad7: &#39;Numpad 7&#39;, // MISSING
+	numpad8: &#39;Numpad 8&#39;, // MISSING
+	numpad9: &#39;Numpad 9&#39;, // MISSING
+	multiply: &#39;Multiplicar&#39;,
+	add: &#39;Adicionar&#39;,
+	subtract: &#39;Subtrair&#39;,
+	decimalPoint: &#39;Decimal Point&#39;, // MISSING
+	divide: &#39;Separar&#39;,
+	f1: &#39;F1&#39;,
+	f2: &#39;F2&#39;,
+	f3: &#39;F3&#39;,
+	f4: &#39;F4&#39;,
+	f5: &#39;F5&#39;,
+	f6: &#39;F6&#39;,
+	f7: &#39;F7&#39;,
+	f8: &#39;F8&#39;,
+	f9: &#39;F9&#39;,
+	f10: &#39;F10&#39;,
+	f11: &#39;F11&#39;,
+	f12: &#39;F12&#39;,
+	numLock: &#39;Num Lock&#39;, // MISSING
+	scrollLock: &#39;Scroll Lock&#39;, // MISSING
+	semiColon: &#39;Semicolon&#39;, // MISSING
+	equalSign: &#39;Equal Sign&#39;, // MISSING
+	comma: &#39;Vírgula&#39;,
+	dash: &#39;Cardinal&#39;,
+	period: &#39;Ponto&#39;,
+	forwardSlash: &#39;Forward Slash&#39;, // MISSING
+	graveAccent: &#39;Acento grave&#39;,
+	openBracket: &#39;Open Bracket&#39;, // MISSING
+	backSlash: &#39;Backslash&#39;, // MISSING
+	closeBracket: &#39;Close Bracket&#39;, // MISSING
+	singleQuote: &#39;Plica&#39;
+} );
+</pre>
+</body>
+</html>

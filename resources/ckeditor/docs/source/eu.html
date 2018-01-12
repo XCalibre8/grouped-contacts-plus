@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='global-property-'>/**
+</span> * @license Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or http://ckeditor.com/license
+ */
+
+CKEDITOR.plugins.setLang( &#39;a11yhelp&#39;, &#39;eu&#39;, {
+	title: &#39;Erabilerraztasunaren argibideak&#39;,
+	contents: &#39;Laguntzaren edukiak. Elkarrizketa-koadro hau ixteko sakatu ESC.&#39;,
+	legend: [
+		{
+		name: &#39;Orokorra&#39;,
+		items: [
+			{
+			name: &#39;Editorearen tresna-barra&#39;,
+			legend: &#39;Sakatu ${toolbarFocus} tresna-barrara nabigatzeko. Tresna-barrako aurreko eta hurrengo taldera joateko erabili TAB eta MAIUS+TAB. Tresna-barrako aurreko eta hurrengo botoira joateko erabili ESKUIN-GEZIA eta EZKER-GEZIA. Sakatu ZURIUNEA edo SARTU tresna-barrako botoia aktibatzeko.&#39;
+		},
+
+			{
+			name: &#39;Editorearen elkarrizketa-koadroa&#39;,
+			legend:
+				&#39;Elkarrizketa-koadro baten barruan sakatu TAB hurrengo elementura nabigatzeko, sakatu MAIUS+TAB aurreko elementura joateko, sakatu SARTU elkarrizketa-koadroa bidaltzeko eta sakatu ESC uzteko. Elkarrizketa-koadro batek hainbat fitxa dituenean, ALT+F10 erabiliz irits daiteke fitxen zerrendara, edo TAB erabiliz. Fokoa fitxen zerrendak duenean, aurreko eta hurrengo fitxetara joateko erabili EZKER-GEZIA eta ESKUIN-GEZIA.&#39; 
+		},
+
+			{
+			name: &#39;Editorearen testuinguru-menua&#39;,
+			legend: &#39;Sakatu ${contextMenu} edo APLIKAZIO TEKLA testuinguru-menua irekitzeko. Menuko hurrengo aukerara joateko erabili TAB edo BEHERA GEZIA. Aurreko aukerara nabigatzeko erabili MAIUS+TAB edo GORA GEZIA. Sakatu ZURIUNEA edo SARTU menuko aukera hautatzeko. Ireki uneko aukeraren azpi-menua ZURIUNEA edo SARTU edo ESKUIN-GEZIA erabiliz. Menuko aukera gurasora itzultzeko erabili ESC edo EZKER-GEZIA. Testuinguru-menua ixteko sakatu ESC.&#39;
+		},
+
+			{
+			name: &#39;Editorearen zerrenda-koadroa&#39;,
+			legend: &#39;Zerrenda-koadro baten barruan, zerrendako hurrengo elementura joateko erabili TAB edo BEHERA GEZIA. Zerrendako aurreko elementura nabigatzeko MAIUS+TAB edo GORA GEZIA. Sakatu ZURIUNEA edo SARTU zerrendako aukera hautatzeko. Sakatu ESC zerrenda-koadroa ixteko.&#39;
+		},
+
+			{
+			name: &#39;Editorearen elementuaren bide-barra&#39;,
+			legend: &#39;Sakatu ${elementsPathFocus} elementuaren bide-barrara nabigatzeko. Hurrengo elementuaren botoira joateko erabili TAB edo ESKUIN-GEZIA. Aurreko botoira joateko aldiz erabili MAIUS+TAB edo EZKER-GEZIA. Elementua editorean hautatzeko sakatu ZURIUNEA edo SARTU.&#39;
+		}
+		]
+	},
+		{
+		name: &#39;Komandoak&#39;,
+		items: [
+			{
+			name: &#39;Desegin komandoa&#39;,
+			legend: &#39;Sakatu ${undo}&#39;
+		},
+			{
+			name: &#39;Berregin komandoa&#39;,
+			legend: &#39;Sakatu ${redo}&#39;
+		},
+			{
+			name: &#39;Lodia komandoa&#39;,
+			legend: &#39;Sakatu ${bold}&#39;
+		},
+			{
+			name: &#39;Etzana komandoa&#39;,
+			legend: &#39;Sakatu ${italic}&#39;
+		},
+			{
+			name: &#39;Azpimarratu komandoa&#39;,
+			legend: &#39;Sakatu ${underline}&#39;
+		},
+			{
+			name: &#39;Esteka komandoa&#39;,
+			legend: &#39;Sakatu ${link}&#39;
+		},
+			{
+			name: &#39;Tolestu tresna-barra komandoa&#39;,
+			legend: &#39;Sakatu ${toolbarCollapse}&#39;
+		},
+			{
+			name: &#39; Access previous focus space command&#39;, // MISSING
+			legend: &#39;Press ${accessPreviousSpace} to access the closest unreachable focus space before the caret, for example: two adjacent HR elements. Repeat the key combination to reach distant focus spaces.&#39; // MISSING
+		},
+			{
+			name: &#39; Access next focus space command&#39;, // MISSING
+			legend: &#39;Press ${accessNextSpace} to access the closest unreachable focus space after the caret, for example: two adjacent HR elements. Repeat the key combination to reach distant focus spaces.&#39; // MISSING
+		},
+			{
+			name: &#39;Erabilerraztasunaren laguntza&#39;,
+			legend: &#39;Sakatu ${a11yHelp}&#39;
+		}
+		]
+	}
+	],
+	tab: &#39;Tabuladorea&#39;,
+	pause: &#39;Pausatu&#39;,
+	capslock: &#39;Blok Maius&#39;,
+	escape: &#39;Ihes&#39;,
+	pageUp: &#39;Page Up&#39;, // MISSING
+	pageDown: &#39;Page Down&#39;, // MISSING
+	leftArrow: &#39;Ezker-gezia&#39;,
+	upArrow: &#39;Gora gezia&#39;,
+	rightArrow: &#39;Eskuin-gezia&#39;,
+	downArrow: &#39;Behera gezia&#39;,
+	insert: &#39;Txertatu&#39;,
+	leftWindowKey: &#39;Ezkerreko Windows tekla&#39;,
+	rightWindowKey: &#39;Eskuineko Windows tekla&#39;,
+	selectKey: &#39;Hautatu tekla&#39;,
+	numpad0: &#39;Zenbakizko teklatua 0&#39;,
+	numpad1: &#39;Zenbakizko teklatua 1&#39;,
+	numpad2: &#39;Zenbakizko teklatua 2&#39;,
+	numpad3: &#39;Zenbakizko teklatua 3&#39;,
+	numpad4: &#39;Zenbakizko teklatua 4&#39;,
+	numpad5: &#39;Zenbakizko teklatua 5&#39;,
+	numpad6: &#39;Zenbakizko teklatua 6&#39;,
+	numpad7: &#39;Zenbakizko teklatua 7&#39;,
+	numpad8: &#39;Zenbakizko teklatua 8&#39;,
+	numpad9: &#39;Zenbakizko teklatua 9&#39;,
+	multiply: &#39;Biderkatu&#39;,
+	add: &#39;Gehitu&#39;,
+	subtract: &#39;Kendu&#39;,
+	decimalPoint: &#39;Koma hamartarra&#39;,
+	divide: &#39;Zatitu&#39;,
+	f1: &#39;F1&#39;,
+	f2: &#39;F2&#39;,
+	f3: &#39;F3&#39;,
+	f4: &#39;F4&#39;,
+	f5: &#39;F5&#39;,
+	f6: &#39;F6&#39;,
+	f7: &#39;F7&#39;,
+	f8: &#39;F8&#39;,
+	f9: &#39;F9&#39;,
+	f10: &#39;F10&#39;,
+	f11: &#39;F11&#39;,
+	f12: &#39;F12&#39;,
+	numLock: &#39;Blok Zenb&#39;,
+	scrollLock: &#39;Blok Korr&#39;,
+	semiColon: &#39;Puntu eta koma&#39;,
+	equalSign: &#39;Berdin zeinua&#39;,
+	comma: &#39;Koma&#39;,
+	dash: &#39;Marratxoa&#39;,
+	period: &#39;Puntua&#39;,
+	forwardSlash: &#39;Barra&#39;,
+	graveAccent: &#39;Azentu kamutsa&#39;,
+	openBracket: &#39;Parentesia ireki&#39;,
+	backSlash: &#39;Alderantzizko barra&#39;,
+	closeBracket: &#39;Itxi parentesia&#39;,
+	singleQuote: &#39;Komatxo bakuna&#39;
+} );
+</pre>
+</body>
+</html>

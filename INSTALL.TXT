@@ -1,0 +1,25 @@
+The project should be placed in the location of your choice on your web server.
+
+Log in to your MySQL server as an administrator or root.
+
+Create a new database on your MySQL if desired, you may choose to use an existing database if you prefer
+but this leaves the possibility of naming conflicts.
+
+You may create a MySQL user with limited access rights if desired. When running the application requires
+rights to SELECT, INSERT, UPDATE, DELETE and EXECUTE. In future the rights for CREATE TEMPORARY TABLES and LOCK TABLES may be used but these are not currently required.
+
+In your selected database run the Create.sql file. This file does not need to be present on your web server.
+
+After the Create.sql file has run run the Populate.sql file. This file also does not need to be present on 
+your web server.
+
+Update the resources/get_settings.php file with the relevant details for your MySQL server and the user you
+wish to use for running the application.
+
+Once installed the site should run by navigating to the relevant location on your server from a web browser.
+The default administrator login details are...
+
+User: Admin
+Password: neverknown
+
+Feel free to play around, Functionality not guaranteed.

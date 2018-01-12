@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='global-property-'>/**
+</span> * @license Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or http://ckeditor.com/license
+ */
+
+CKEDITOR.plugins.setLang( &#39;a11yhelp&#39;, &#39;fr&#39;, {
+	title: &#39;Instructions d\&#39;accessibilité&#39;,
+	contents: &#39;Contenu de l\&#39;aide. Pour fermer cette fenêtre, appuyez sur la touche Échap.&#39;,
+	legend: [
+		{
+		name: &#39;Général&#39;,
+		items: [
+			{
+			name: &#39;Barre d\&#39;outils de l\&#39;éditeur&#39;,
+			legend: &#39;Appuyer sur ${toolbarFocus} pour accéder à la barre d\&#39;outils. Se déplacer vers le groupe suivant ou précédent de la barre d\&#39;outils avec les touches Tab et Maj+Tab. Se déplacer vers le bouton suivant ou précédent de la barre d\&#39;outils avec les touches Flèche droite et Flèche gauche. Appuyer sur la barre d\&#39;espace ou la touche Entrée pour activer le bouton de barre d\&#39;outils.&#39;
+		},
+
+			{
+			name: &#39;Fenêtre de l\&#39;éditeur&#39;,
+			legend:
+				&#39;Dans une boîte de dialogue, appuyer sur Tab pour passer à l\&#39;élément suivant, appuyer sur Maj+Tab pour passer à l\&#39;élément précédent, appuyer sur Entrée pour valider, appuyer sur Échap pour annuler. Quand une boîte de dialogue possède des onglets, la liste peut être atteinte avec Alt+F10 ou avec Tab. Dans la liste des onglets, se déplacer vers le suivant et le précédent avec les touches Flèche droite et Flèche gauche respectivement.&#39; 
+		},
+
+			{
+			name: &#39;Menu contextuel de l\&#39;éditeur&#39;,
+			legend: &#39;Appuyer sur ${contextMenu} ou sur la touche Menu pour ouvrir le menu contextuel. Se déplacer ensuite vers l\&#39;option suivante du menu avec les touches Tab ou Flèche bas. Se déplacer vers l\&#39;option précédente avec les touches Maj+Tab ou Flèche haut. Appuyer sur la barre d\&#39;espace ou la touche Entrée pour sélectionner l\&#39;option du menu. Appuyer sur la barre d\&#39;espace, la touche Entrée ou Flèche droite pour ouvrir le sous-menu de l\&#39;option sélectionnée. Revenir à l\&#39;élément de menu parent avec la touche Échap ou Flèche gauche. Fermer le menu contextuel avec Échap.&#39;
+		},
+
+			{
+			name: &#39;Zone de liste de l\&#39;éditeur&#39;,
+			legend: &#39;Dans une liste en menu déroulant, se déplacer vers l\&#39;élément suivant de la liste avec les touches Tab ou Flèche bas. Se déplacer vers l\&#39;élément précédent de la liste avec les touches Maj+Tab ou Flèche haut. Appuyer sur la barre d\&#39;espace ou sur Entrée pour sélectionner l\&#39;option dans la liste. Appuyer sur Échap pour fermer le menu déroulant.&#39;
+		},
+
+			{
+			name: &#39;Barre du chemin d\&#39;éléments de l\&#39;éditeur&#39;,
+			legend: &#39;Appuyer sur ${elementsPathFocus} pour naviguer vers la barre du fil d\&#39;Ariane des éléments. Se déplacer vers le bouton de l\&#39;élément suivant avec les touches Tab ou Flèche droite. Se déplacer vers le bouton précédent avec les touches Maj+Tab ou Flèche gauche. Appuyer sur la barre d\&#39;espace ou sur Entrée pour sélectionner l\&#39;élément dans l\&#39;éditeur.&#39;
+		}
+		]
+	},
+		{
+		name: &#39;Commandes&#39;,
+		items: [
+			{
+			name: &#39; Annuler la commande&#39;,
+			legend: &#39;Appuyer sur ${undo}&#39;
+		},
+			{
+			name: &#39;Commande restaurer&#39;,
+			legend: &#39;Appuyer sur ${redo}&#39;
+		},
+			{
+			name: &#39; Commande gras&#39;,
+			legend: &#39;Appuyer sur ${bold}&#39;
+		},
+			{
+			name: &#39; Commande italique&#39;,
+			legend: &#39;Appuyer sur ${italic}&#39;
+		},
+			{
+			name: &#39; Commande souligné&#39;,
+			legend: &#39;Appuyer sur ${underline}&#39;
+		},
+			{
+			name: &#39; Commande lien&#39;,
+			legend: &#39;Appuyer sur ${link}&#39;
+		},
+			{
+			name: &#39; Commande enrouler la barre d\&#39;outils&#39;,
+			legend: &#39;Appuyer sur ${toolbarCollapse}&#39;
+		},
+			{
+			name: &#39;Commande d\&#39;accès à l\&#39;élément sélectionnable précédent&#39;,
+			legend: &#39;Appuyer sur ${accessNextSpace} pour accéder à l\&#39;élément sélectionnable inatteignable le plus proche avant le curseur, par exemple : deux lignes horizontales adjacentes. Répéter la combinaison de touches pour atteindre les éléments sélectionnables précédents.&#39;
+		},
+			{
+			name: &#39;Commande d\&#39;accès à l\&#39;élément sélectionnable suivant&#39;,
+			legend: &#39;Appuyer sur ${accessNextSpace} pour accéder à l\&#39;élément sélectionnable inatteignable le plus proche après le curseur, par exemple : deux lignes horizontales adjacentes. Répéter la combinaison de touches pour atteindre les éléments sélectionnables suivants.&#39;
+		},
+			{
+			name: &#39; Aide sur l\&#39;accessibilité&#39;,
+			legend: &#39;Appuyer sur ${a11yHelp}&#39;
+		}
+		]
+	}
+	],
+	tab: &#39;Tabulation&#39;,
+	pause: &#39;Pause&#39;,
+	capslock: &#39;Verr. Maj.&#39;,
+	escape: &#39;Échap&#39;,
+	pageUp: &#39;Page supérieure&#39;,
+	pageDown: &#39;Page suivante&#39;,
+	leftArrow: &#39;Flèche gauche&#39;,
+	upArrow: &#39;Flèche haut&#39;,
+	rightArrow: &#39;Flèche droite&#39;,
+	downArrow: &#39;Flèche basse&#39;,
+	insert: &#39;Inser&#39;,
+	leftWindowKey: &#39;Touche Windows gauche&#39;,
+	rightWindowKey: &#39;Touche Windows droite&#39;,
+	selectKey: &#39;Touche Sélectionner&#39;,
+	numpad0: &#39;0 du pavé numérique&#39;,
+	numpad1: &#39;1 du pavé numérique&#39;,
+	numpad2: &#39;2 du pavé numérique&#39;,
+	numpad3: &#39;3 du pavé numérique&#39;,
+	numpad4: &#39;4 du pavé numérique&#39;,
+	numpad5: &#39;5 du pavé numérique&#39;,
+	numpad6: &#39;6 du pavé numérique&#39;,
+	numpad7: &#39;7 du pavé numérique&#39;,
+	numpad8: &#39;Pavé numérique 8&#39;,
+	numpad9: &#39;9 du pavé numérique&#39;,
+	multiply: &#39;Multiplier&#39;,
+	add: &#39;Plus&#39;,
+	subtract: &#39;Moins&#39;,
+	decimalPoint: &#39;Point décimal&#39;,
+	divide: &#39;Diviser&#39;,
+	f1: &#39;F1&#39;,
+	f2: &#39;F2&#39;,
+	f3: &#39;F3&#39;,
+	f4: &#39;F4&#39;,
+	f5: &#39;F5&#39;,
+	f6: &#39;F6&#39;,
+	f7: &#39;F7&#39;,
+	f8: &#39;F8&#39;,
+	f9: &#39;F9&#39;,
+	f10: &#39;F10&#39;,
+	f11: &#39;F11&#39;,
+	f12: &#39;F12&#39;,
+	numLock: &#39;Verr. Num.&#39;,
+	scrollLock: &#39;Arrêt défil.&#39;,
+	semiColon: &#39;Point-virgule&#39;,
+	equalSign: &#39;Signe égal&#39;,
+	comma: &#39;Virgule&#39;,
+	dash: &#39;Tiret&#39;,
+	period: &#39;Point&#39;,
+	forwardSlash: &#39;Barre oblique&#39;,
+	graveAccent: &#39;Accent grave&#39;,
+	openBracket: &#39;Parenthèse ouvrante&#39;,
+	backSlash: &#39;Barre oblique inverse&#39;,
+	closeBracket: &#39;Parenthèse fermante&#39;,
+	singleQuote: &#39;Apostrophe&#39;
+} );
+</pre>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js"><span id='global-property-'>/**
+</span> * @license Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or http://ckeditor.com/license
+ */
+
+CKEDITOR.plugins.setLang( &#39;a11yhelp&#39;, &#39;oc&#39;, {
+	title: &#39;Instruccions d\&#39;accessibilitat&#39;,
+	contents: &#39;Contengut de l\&#39;ajuda. Per tampar aquesta fenèstra, quichatz sus la tòca Escap.&#39;,
+	legend: [
+		{
+		name: &#39;General&#39;,
+		items: [
+			{
+			name: &#39;Barra d\&#39;aisinas de l\&#39;editor&#39;,
+			legend: &#39;Quichar sus ${toolbarFocus} per accedir a la barra d\&#39;aisinas. Se desplaçar cap al groupe seguent o precedent de la barra d\&#39;aisinas amb las tòcas Tab e Maj+Tab. Se desplaçar cap al boton seguent o precedent de la barra d\&#39;aisinas amb las tòcas Sageta dreita e Sageta esquèrra. Quichar sus la barra d\&#39;espaci o la tòca Entrada per activer lo boton de barra d\&#39;aisinas.&#39;
+		},
+
+			{
+			name: &#39;Fenèstra de l\&#39;editor&#39;,
+			legend:
+				&#39;Dins una bóstia de dialòg, quichar sus Tab per passar a l\&#39;element seguent, quichar sus Maj+Tab per passar a l\&#39;element precedent, quichar sus Entrada per validar, quichar sus Escap per anullar. Quand una bóstia de dialòg possedís des onglets, la lista pòt èsser atenta amb Alt+F10 o amb Tab. Dins la lista dels onglets, se desplaçar cap al seguent e lo precedent amb las tòcas Sageta dreita e Sageta esquèrra respectivament.&#39; 
+		},
+
+			{
+			name: &#39;Menú contextual de l\&#39;editor&#39;,
+			legend: &#39;Quichar sus ${contextMenu} o sus la tòca Menú per dobrir lo menú contextual. Se desplaçar ensuite cap a l\&#39;opcion seguenta del menú amb las tòcas Tab o Sageta bas. Se desplaçar cap a l\&#39;opcion precedenta amb las tòcas Maj+Tab o Sageta naut. Quichar sus la barra d\&#39;espaci o la tòca Entrada per seleccionar l\&#39;opcion del menu. Quichar sus la barra d\&#39;espaci, la tòca Entrada o Sageta dreita per dobrir lo sosmenú de l\&#39;opcion seleccionada. Tornar a l\&#39;element de menú parent amb la tòca Escap o Sageta esquèrra. Tampar lo menú contextual amb Escap.&#39;
+		},
+
+			{
+			name: &#39;Zòna de lista de l\&#39;editor&#39;,
+			legend: &#39;Dins una lista en menú desenrotlant, se desplaçar cap a l\&#39;element seguent de la lista amb las tòcas Tab o Sageta bas. Se desplaçar cap a l\&#39;element precedent de la lista amb las tòcas Maj+Tab o Sageta naut. Quichar sus la barra d\&#39;espaci o sus Entrada per seleccionar l\&#39;opcion dins la lista. Quichar sus Escap per tampar lo menú desenrotlant.&#39;
+		},
+
+			{
+			name: &#39;Barra del camin d\&#39;elements de l\&#39;editor&#39;,
+			legend: &#39;Quichar sus ${elementsPathFocus} per naviguer cap a la barra del fial d\&#39;Ariana dels elements. Se desplaçar cap al boton de l\&#39;element seguent amb las tòcas Tab o Sageta dreita. Se desplaçar cap al boton precedent amb las tòcas Maj+Tab o Sageta esquèrra. Quichar sus la barra d\&#39;espaci o sus Entrada per seleccionar l\&#39;element dins l\&#39;editor.&#39;
+		}
+		]
+	},
+		{
+		name: &#39;Comandas&#39;,
+		items: [
+			{
+			name: &#39;Anullar la comanda&#39;,
+			legend: &#39;Quichar sus ${undo}&#39;
+		},
+			{
+			name: &#39;Comanda restablir&#39;,
+			legend: &#39;Quichar sus ${redo}&#39;
+		},
+			{
+			name: &#39; Comanda gras&#39;,
+			legend: &#39;Quichar sus ${bold}&#39;
+		},
+			{
+			name: &#39; Comanda italica&#39;,
+			legend: &#39;Quichar sus ${italic}&#39;
+		},
+			{
+			name: &#39; Comanda solinhat&#39;,
+			legend: &#39;Quichar sus ${underline}&#39;
+		},
+			{
+			name: &#39; Comanda ligam&#39;,
+			legend: &#39;Quichar sus ${link}&#39;
+		},
+			{
+			name: &#39;Comanda enrotlar la barra d\&#39;aisinas&#39;,
+			legend: &#39;Quichar sus ${toolbarCollapse}&#39;
+		},
+			{
+			name: &#39;Comanda d\&#39;accès a l\&#39;element seleccionable precedent&#39;,
+			legend: &#39;Quichar sus ${accessNextSpace} per accedir a l\&#39;element seleccionable inategnible lo mai pròche abans lo cursor, per exemple : doas linhas orizontalas adjacentas. Repetir la combinason de tòcas per aténher los elements seleccionables precedents.&#39;
+		},
+			{
+			name: &#39;Comanda d\&#39;accès a l\&#39;element seleccionable seguent&#39;,
+			legend: &#39;Quichar sus ${accessNextSpace} per accedir a l\&#39;element seleccionable inatenhible lo mai pròche aprèp lo cursor, per exemple : doas linhas orizontalas adjacentas. Repetir la combinason de tòcas per aténher los elements seleccionables seguents.&#39;
+		},
+			{
+			name: &#39; Ajuda sus l\&#39;accessibilitat&#39;,
+			legend: &#39;Quichar sus ${a11yHelp}&#39;
+		}
+		]
+	}
+	],
+	tab: &#39;Tabulacion&#39;,
+	pause: &#39;Pausa&#39;,
+	capslock: &#39;Verr. Maj.&#39;,
+	escape: &#39;Escap&#39;,
+	pageUp: &#39;Pagina superiora&#39;,
+	pageDown: &#39;Pagina seguenta&#39;,
+	leftArrow: &#39;Sageta esquèrra&#39;,
+	upArrow: &#39;Sageta naut&#39;,
+	rightArrow: &#39;Sageta dreita&#39;,
+	downArrow: &#39;Sageta bassa&#39;,
+	insert: &#39;Inser&#39;,
+	leftWindowKey: &#39;Tòca Windows esquèrra&#39;,
+	rightWindowKey: &#39;Tòca Windows dreita&#39;,
+	selectKey: &#39;Tòca Seleccionar&#39;,
+	numpad0: &#39;0 del pavat numeric&#39;,
+	numpad1: &#39;1 del pavat numeric&#39;,
+	numpad2: &#39;2 del pavat numeric&#39;,
+	numpad3: &#39;3 del pavat numeric&#39;,
+	numpad4: &#39;4 del pavat numeric&#39;,
+	numpad5: &#39;5 del pavat numeric&#39;,
+	numpad6: &#39;6 del pavat numeric&#39;,
+	numpad7: &#39;7 del pavat numeric&#39;,
+	numpad8: &#39;Pavat numeric 8&#39;,
+	numpad9: &#39;9 del pavat numeric&#39;,
+	multiply: &#39;Multiplicar&#39;,
+	add: &#39;Plus&#39;,
+	subtract: &#39;Mens&#39;,
+	decimalPoint: &#39;Punt decimal&#39;,
+	divide: &#39;Devesir&#39;,
+	f1: &#39;F1&#39;,
+	f2: &#39;F2&#39;,
+	f3: &#39;F3&#39;,
+	f4: &#39;F4&#39;,
+	f5: &#39;F5&#39;,
+	f6: &#39;F6&#39;,
+	f7: &#39;F7&#39;,
+	f8: &#39;F8&#39;,
+	f9: &#39;F9&#39;,
+	f10: &#39;F10&#39;,
+	f11: &#39;F11&#39;,
+	f12: &#39;F12&#39;,
+	numLock: &#39;Verr. Num.&#39;,
+	scrollLock: &#39;Arrèst desfil.&#39;,
+	semiColon: &#39;Punt-virgula&#39;,
+	equalSign: &#39;Signe egal&#39;,
+	comma: &#39;Virgula&#39;,
+	dash: &#39;Jonhent&#39;,
+	period: &#39;Punt&#39;,
+	forwardSlash: &#39;Barra oblica&#39;,
+	graveAccent: &#39;Accent grèu&#39;,
+	openBracket: &#39;Parentèsi dobèrta&#39;,
+	backSlash: &#39;Barra oblica invèrsa&#39;,
+	closeBracket: &#39;Parentèsi tampanta&#39;,
+	singleQuote: &#39;Apostròfa&#39;
+} );
+</pre>
+</body>
+</html>
